@@ -1,0 +1,2 @@
+#!/bin/bash
+>edit prog.c | gcc -c $CFILE -o $(echo $(echo "$CFILE" | cut -d'.' -f1).o)
