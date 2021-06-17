@@ -1,2 +1,2 @@
 #!/bin/bash
->edit $CFILE | gcc -S -c $CFILE -o $(echo $(echo "$CFILE" | cut -d'.' -f1).s)>
+>edit $CFILE | gcc -S -c $CFILE -o $(echo $(echo "$CFILE" | cut -d'.' -f1).s)
