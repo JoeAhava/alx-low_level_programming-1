@@ -11,6 +11,6 @@ char all;
 	{
 		putchar(all);
 	}
-	putchar("\n")
+	putchar(10)
 	return (0);
 }
