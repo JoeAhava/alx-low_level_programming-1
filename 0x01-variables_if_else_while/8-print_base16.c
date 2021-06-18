@@ -14,8 +14,10 @@ int main(void)
 		if (n <= 9)
 			putchar(n);
 		else
+		{
 			putchar(s);
 			s++;
+		}
 	}
 	putchar(10);
 	return (0);
