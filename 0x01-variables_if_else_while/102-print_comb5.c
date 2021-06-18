@@ -6,31 +6,31 @@
  *     *     **/
 int main(void)
 {
-	int a = '0';
-	int b = '0';
-	int c = '0';
-	int d = '0';
+	int n = '0';
+	int m;
+	int o;
+	int p;
 
-	for (; a <= '9'; a++)
+	for (; n <= '9'; n++)
 	{
-		for (; b <= '9'; b++)
+		for (m = '0'; m <= '9'; m++)
 		{
-			for (; c <= '9'; c++)
+			for (o = '0'; o <= '9'; o++)
 			{
-				for (; d <= '9'; d++)
+				for (p = '0'; p <= '9'; p++)
 				{
-					if ((a < '0') || (a == '0' && b < d))
+					if ((n < o) || (n == o && m < p))
 					{
-					putchar(a);
-					putchar(b);
-					putchar(' ');
-					putchar(c);
-					putchar(d);
-					}
-					if(!(a == '9' && b == '8'))
+						putchar(n);
+						putchar(m);
+						putchar(' ');
+						putchar(o);
+						aputchar(p);
+					if (!(n == '9' && m == '8'))
 					{
 						putchar(',');
 						putchar(' ');
+					}
 					}
 				}
 			}
