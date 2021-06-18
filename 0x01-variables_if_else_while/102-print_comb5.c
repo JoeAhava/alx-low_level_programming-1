@@ -17,7 +17,7 @@ int main(void)
 		{
 			for (; c <= '9'; c++)
 			{
-				for (d = c + 1; c <= '9'; d++)
+				for (; d <= '9'; d++)
 				{
 					if ((a < '0') || (a == '0' && b < d))
 					{
