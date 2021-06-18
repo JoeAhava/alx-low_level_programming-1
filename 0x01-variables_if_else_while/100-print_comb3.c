@@ -7,22 +7,21 @@
 int main(void)
 {
 	int a = '0';
-	int b = '1';
+	int b = '0';
 
 	for (; a <= '9'; a++)
 	{
-		for (; b <= '9'; b++)
+		for (b =  a + 1; b <= '9'; b++)
 		{
 			putchar(a);
 			putchar(b);
-			if (a != 8)
+			if (a != '8')
 			{
 				putchar(',');
 				putchar(' ');
-			}
-			else if (b == 9)
-				b = a + '1';
+			}		
 		}
+
 	}
 	putchar(10);
 	return (0);
