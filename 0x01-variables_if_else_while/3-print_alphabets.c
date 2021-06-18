@@ -16,6 +16,6 @@ int main(void)
 	{
 		putchar(s);
 	}
-	puthar(10);
+	putchar(10);
 	return (0);
 }
