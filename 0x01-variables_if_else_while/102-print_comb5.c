@@ -19,7 +19,7 @@ int main(void)
 			{
 				for (; d <= '9'; d++)
 				{
-					if ((a < o) || (a == o && b < d))
+					if ((a < '0') || (a == '0' && b < d))
 					{
 						putchar(a);
 						putchar(b);
