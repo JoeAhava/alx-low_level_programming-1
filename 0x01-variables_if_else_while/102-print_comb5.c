@@ -6,27 +6,27 @@
  *     *     **/
 int main(void)
 {
-	int n = '0';
-	int m;
-	int o;
-	int p;
+	int a = '0';
+	int b = '0';
+	int c = '0';
+	int d = '0';
 
-	for (; n <= '9'; n++)
+	for (; a <= '9'; a++)
 	{
-		for (m = '0'; m <= '9'; m++)
+		for (; b <= '9'; b++)
 		{
-			for (o = '0'; o <= '9'; o++)
+			for (; c <= '9'; c++)
 			{
-				for (p = '0'; p <= '9'; p++)
+				for (; d <= '9'; d++)
 				{
-					if ((n < o) || (n == o && m < p))
+					if ((a < o) || (a == o && b < d))
 					{
-						putchar(n);
-						putchar(m);
+						putchar(a);
+						putchar(b);
 						putchar(' ');
-						putchar(o);
-						aputchar(p);
-					if (!(n == '9' && m == '8'))
+						putchar(c);
+						aputchar(d);
+					if (!(a == '9' && b == '8'))
 					{
 						putchar(',');
 						putchar(' ');
