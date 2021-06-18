@@ -20,6 +20,8 @@ int main(void)
 				putchar(',');
 				putchar(' ');
 			}
+			else if (b == 9)
+				b = a + '1';
 		}
 	}
 	putchar(10);
