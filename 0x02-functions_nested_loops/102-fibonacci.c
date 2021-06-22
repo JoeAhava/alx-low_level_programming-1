@@ -16,10 +16,18 @@ int main(void)
 	printf("%ld, %ld, ", a, b);
 	while (c < 24)
 	{
-		a = a + b;
-		printf("%ld, ", a);
-		b = b + a;
-		printf("%ld, ", b);
+		if (c != 24)
+		{
+			a = a + b;
+			printf("%ld, ", a);
+			b = b + a;
+			printf("%ld, ", b);
+		}
+		else
+			a = a + b;
+			printf("%d, ", a);
+			b = b + a;
+			printf("%d", b);
 		c++;
 	}
 	return (0);
