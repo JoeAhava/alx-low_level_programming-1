@@ -1,11 +1,9 @@
 #include "holberton.h"
-
-/*
- * This is
- * the main
- * function
-*/
-
+/**
+ *  *  *  * main - Entry point
+ *   *   *   *
+ *    *    *    * Return: Always 0 (Success)
+ *     *     *     **/
 int main(void)
 {
 	char *pout = "Holberton";
