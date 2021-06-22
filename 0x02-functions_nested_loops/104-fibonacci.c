@@ -13,9 +13,9 @@ int main(void)
 	int c = 0;
 
 	printf("%ld, %ld, ", a, b);
-	while (c < 43)
+	while (c < 41)
 	{
-		if (c != 42)
+		if (c != 40)
 		{
 			a = a + b;
 			printf("%ld, ", a);
