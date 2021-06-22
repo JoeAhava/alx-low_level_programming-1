@@ -16,6 +16,7 @@ void times_table(void)
 		while (j < 10)
 		{
 			_putchar('0' + ((i * j) / 10));
+			j++;
 		}
 		_putchar('\n');
 		i++;
