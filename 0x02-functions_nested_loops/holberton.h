@@ -2,4 +2,5 @@
 #define HOLBERTON_H
 
 int _putchar(char car);
+void print_alphabet(void);
 #endif
