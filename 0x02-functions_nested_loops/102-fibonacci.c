@@ -24,10 +24,12 @@ int main(void)
 			printf("%ld, ", b);
 		}
 		else
+		{
 			a = a + b;
 			printf("%d, ", a);
 			b = b + a;
 			printf("%d", b);
+		}
 		c++;
 	}
 	return (0);
