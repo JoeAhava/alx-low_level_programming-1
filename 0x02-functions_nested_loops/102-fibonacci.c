@@ -9,17 +9,17 @@
 
 int main(void)
 {
-	int a = 1;
-	int b = 2;
+	long int a = 1;
+	long int b = 2;
 	int c = 0;
 
-	printf("%d, %d\n", a, b);
+	printf("%ld, %ld\n", a, b);
 	while (c < 50)
 	{
 		a = a + b;
-		printf("%d, ", a);
+		printf("%ld, ", a);
 		b = b + a;
-		printf("%d, ", b);
+		printf("%ld, ", b);
 		c++;
 	}
 	return (0);
