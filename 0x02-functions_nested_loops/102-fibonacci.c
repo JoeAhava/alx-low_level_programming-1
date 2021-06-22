@@ -14,7 +14,7 @@ int main(void)
 	int c = 0;
 
 	printf("%ld, %ld, ", a, b);
-	while (c < 20)
+	while (c < 22)
 	{
 		a = a + b;
 		printf("%ld, ", a);
