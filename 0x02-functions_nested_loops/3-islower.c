@@ -2,10 +2,11 @@
 /**
  * _islower - chakes if a letter is lower case
  *
- * Returnes: intiger
+ *@c: intiger value
+ *
+ * Return: intiger
  *
  */
-
 int _islower(int c)
 {
 	if (c >= 97 && c <= 122)
