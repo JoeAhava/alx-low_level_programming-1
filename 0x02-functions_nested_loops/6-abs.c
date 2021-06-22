@@ -2,15 +2,13 @@
 /**
  * _abs - checks the absolute value
  *
- *@int: intiger value
+ *@a: intiger value
  *
  * Return: returns the value of _abs
  */
 
-int _abs(int)
+int _abs(int a)
 {
-	int a;
-
 	if (a >= 0)
 		return (a);
 	else
