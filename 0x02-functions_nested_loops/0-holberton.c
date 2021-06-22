@@ -1,10 +1,16 @@
 #include "holberton.h"
 
+/*
+ * This is
+ * the main
+ * function
+*/
+
 int main(void)
 {
-	char *pout= "Holberton";
+	char *pout = "Holberton";
 
-	while(*pout)
+	while (*pout)
 	{
 		_putchar(*pout);
 		pout++;
