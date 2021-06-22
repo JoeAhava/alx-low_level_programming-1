@@ -9,7 +9,7 @@
 int main(void)
 {
 	int n = 0;
-	long int sum = 0;
+	int sum = 0;
 
 	while ((n * 3) < 1024 || (n * 5) < 1024)
 	{
@@ -22,6 +22,6 @@ int main(void)
 			sum = sum + (n * 3);
 		n++;
 	}
-	printf("%ld", sum);
+	printf("%d\n", sum);
 	return (0);
 }
