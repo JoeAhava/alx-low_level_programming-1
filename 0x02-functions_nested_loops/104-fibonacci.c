@@ -15,21 +15,13 @@ int main(void)
 	printf("%ld, %ld, ", a, b);
 	while (c < 42)
 	{
-		if (c != 41)
-		{
-			a = a + b;
-			printf("%ld, ", a);
-			b = b + a;
-			printf("%ld, ", b);
-		}
-		else
-		{
-			 a = a + b;
-			 printf("%ld, ", a);
-			 b = b + a;
-			 printf("%ld\n", b);
-		}
+		a = a + b;
+		printf("%ld, ", a);
+		b = b + a;
+		printf("%ld, ", b);
 		c++;
 	}
+	a = a + b;
+	printf("%ld\n", a);
 	return (0);
 }
