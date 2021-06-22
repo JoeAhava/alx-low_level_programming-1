@@ -21,7 +21,5 @@ int main(void)
 		printf("%ld, ", b);
 		c++;
 	}
-	a = a + b;
-	printf("%ld\n", a);
 	return (0);
 }
