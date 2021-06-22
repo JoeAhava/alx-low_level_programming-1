@@ -16,7 +16,7 @@ int main(void)
 	printf("%ld, %ld, ", a, b);
 	while (c < 24)
 	{
-		if (c != 24)
+		if (c != 23)
 		{
 			a = a + b;
 			printf("%ld, ", a);
