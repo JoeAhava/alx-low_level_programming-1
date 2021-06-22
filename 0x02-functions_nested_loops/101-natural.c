@@ -9,14 +9,14 @@
 int main(void)
 {
 	int n = 0;
-	long long int sum = 0;
+	long int sum = 0;
 
-	while (n < 1024)
+	while ((n * 3) < 1024 && (n * 5) < 1024)
 	{
-		if ((n % 3) == 0 && (n % 5) == 0)
-			sum = sum + n;
+		sum = sum + (n * 3);
+		sum = sum + (n * 5);
 		n++;
 	}
-	printf("%lld", sum);
+	printf("%ld", sum);
 	return (0);
 }
