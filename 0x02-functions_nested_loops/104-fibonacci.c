@@ -13,9 +13,9 @@ int main(void)
 	int c = 0;
 
 	printf("%ld, %ld, ", a, b);
-	while (c < 96)
+	while (c < 95)
 	{
-		if (c != 95)
+		if (c != 94)
 		{
 			a = a + b;
 			printf("%ld, ", a);
