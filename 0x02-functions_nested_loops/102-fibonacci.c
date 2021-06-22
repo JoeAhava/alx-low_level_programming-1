@@ -26,9 +26,9 @@ int main(void)
 		else
 		{
 			a = a + b;
-			printf("%d, ", a);
+			printf("%ld, ", a);
 			b = b + a;
-			printf("%d", b);
+			printf("%ld", b);
 		}
 		c++;
 	}
