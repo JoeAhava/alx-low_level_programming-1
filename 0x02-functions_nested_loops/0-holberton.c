@@ -1,13 +1,14 @@
-#include <holberton.h>
+#include "holberton.h"
 
 int main(void)
 {
 	char *pout= "Holberton";
 
-	while(*pot)
+	while(*pout)
 	{
-		putchar(sh);
-		*sh++;
+		_putchar(*pout);
+		pout++;
 	}
+	_putchar('\n');
 	return (0);
 }
