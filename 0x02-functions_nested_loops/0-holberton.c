@@ -2,6 +2,12 @@
 
 int main(void)
 {
-	putchar(char * "Holberton\n");
+	char *pout= "Holberton";
+
+	while(*pot)
+	{
+		putchar(sh);
+		*sh++;
+	}
 	return (0);
 }
