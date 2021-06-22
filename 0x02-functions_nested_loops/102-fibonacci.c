@@ -28,7 +28,7 @@ int main(void)
 			a = a + b;
 			printf("%ld, ", a);
 			b = b + a;
-			printf("%ld", b);
+			printf("%ld\n", b);
 		}
 		c++;
 	}
