@@ -13,9 +13,9 @@ int main(void)
 	int c = 0;
 
 	printf("%ld, %ld, ", a, b);
-	while (c < 90)
+	while (c < 60)
 	{
-		if (c != 89)
+		if (c != 59)
 		{
 			a = a + b;
 			printf("%ld, ", a);
