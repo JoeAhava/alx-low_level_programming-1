@@ -20,6 +20,9 @@ int main(void)
 		}
 		else if ((n * 3) < 1024 && (n * 5) > 1024)
 			sum = sum + (n * 3);
+		else
+
+			sum = sum;
 		n++;
 	}
 	printf("%d\n", sum);
