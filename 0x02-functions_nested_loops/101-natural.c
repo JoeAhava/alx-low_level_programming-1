@@ -9,7 +9,7 @@
 int main(void)
 {
 	int n = 0;
-	long int sum = 0;
+	long long int sum = 0;
 
 	while (n < 1024)
 	{
@@ -17,6 +17,6 @@ int main(void)
 			sum = sum + n;
 		n++;
 	}
-	printf("%ld", sum);
+	printf("%lld", sum);
 	return (0);
 }
