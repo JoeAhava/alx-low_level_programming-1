@@ -1,7 +1,7 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * main - main
+ * print_to_98 - main
  *
  * @n: int
  *
