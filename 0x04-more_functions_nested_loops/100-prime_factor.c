@@ -19,11 +19,11 @@ int main(void)
 			d++;
 		else
 		{
-			m = n;
-			n = n / d;
-			if (n == 1)
+			m = i;
+			i = i / d;
+			if (i == 1)
 			{
-				printf("%d\n", m);
+				printf("%ld\n", m);
 				break;
 			}
 		}
