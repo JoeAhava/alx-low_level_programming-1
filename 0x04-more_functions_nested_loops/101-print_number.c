@@ -1,5 +1,5 @@
 #include "holberton.h"
-#include <marh.h>
+#include <math.h>
 
 /**
  * print_number - starting func
