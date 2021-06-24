@@ -1,4 +1,4 @@
-#include "holberton"
+#include "holberton.h"
 
 /**
  * print_numbers - starting function
@@ -7,9 +7,11 @@
 
 void print_numbers(void)
 {
-	for (int i = '0'; i < '10'; i++)
+	int i;
+
+	for (i = 0; i < 10; i++)
 	{
-		_putchar(i);
+		_putchar('0' + i);
 	}
 	_putchar('\n');
 }
