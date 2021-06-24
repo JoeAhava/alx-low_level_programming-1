@@ -1,11 +1,11 @@
 #include "holberton.h"
 
-void positive_or_negative(int n)
+int main(void)
 {
-	if (n < 0)
-		printf("%d is negative\n", n);
-	else if (n == 0)
-		printf("%d is zero \n", n);
-	else
-		printf("%d is pisitive\n", n);
+	int i;
+
+	i=0;
+	positive_or_negative(i);
+
+	return (0);
 }
