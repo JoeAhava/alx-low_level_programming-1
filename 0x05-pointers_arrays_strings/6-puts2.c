@@ -12,6 +12,7 @@
 void puts2(char *str)
 {
 	int i = 0;
+	int j;
 	char *tempo = str;
 
 	while (*tempo)
@@ -19,10 +20,10 @@ void puts2(char *str)
 		i++;
 		tempo++;
 	}
-	while ((i >= 0) && (i % 2 == 0))
+	while ((j <= i) && (j % 2 == 0))
 	{
 		_putchar(*str);
 		str++;
-		i--;
+		j++;
 	}
 }
