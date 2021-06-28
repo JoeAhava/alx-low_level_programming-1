@@ -20,9 +20,12 @@ void puts2(char *str)
 		i++;
 		tempo++;
 	}
-	while ((j <= i) && (j % 2 == 0))
+	while (j <= i)
 	{
+		if (j % 2 == 0)
+		{
 		_putchar(*str);
+		}
 		str++;
 		j++;
 	}
