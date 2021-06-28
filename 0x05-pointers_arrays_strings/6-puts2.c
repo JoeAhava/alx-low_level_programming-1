@@ -12,22 +12,11 @@
 void puts2(char *str)
 {
 	int i = 0;
-	int j = 0;
-	char *tempo = str;
 
-	while (*tempo)
+	while (*(str + i))
 	{
-		i++;
-		tempo++;
-	}
-	while (j <= i)
-	{
-		if (j % 2 == 0)
-		{
-		_putchar(*str);
-		}
-		str++;
-		j++;
+		_putchar(*(str + i));
+		i = i + 2;
 	}
 	_putchar('\n');
 }
