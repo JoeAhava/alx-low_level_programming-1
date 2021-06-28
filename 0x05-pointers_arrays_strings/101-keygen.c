@@ -11,35 +11,15 @@
 
 int main(void)
 {
-	int i, j, k, s;
-	char c[] = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char p[58];
+	int myrand, count, total;
 
 	srand(time(NULL));
-	while (s != 2772)
-	{
-		i = k = s = 0;
-		while ((2772 - 122) > s)
+		for (count = 0, total = 2772; total > 122; count++)
 		{
-			j = rand() % 62;
-			p[i] = c[j];
-			s += c[j];
-			s += c[j];
-			i++;
+			myrand = (rand() % 125) + 1;
+			printf("%c" myrand);
+			total -= myrand;
 		}
-		while (c[k])
-		{
-			if (c[k] == (2772 - s))
-			{
-				p[i] = c[k];
-				s += c[k];
-				i++;
-				break;
-			}
-			k++;
-		}
-	}
-	p[i] = '\0';
-	printf("%s", p);
-	return (0);
+		printf("%c", total);
+		return (0);
 }
