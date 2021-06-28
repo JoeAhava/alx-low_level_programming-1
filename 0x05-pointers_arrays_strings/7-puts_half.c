@@ -1,5 +1,13 @@
 #include "holberton.h"
 
+/**
+ * puts_half - main function
+ *
+ * @str: pointer
+ *
+ * Return: nothing
+ *
+ */
 
 void puts_half(char *str)
 {
