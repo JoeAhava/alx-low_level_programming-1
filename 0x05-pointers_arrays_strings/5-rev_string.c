@@ -14,17 +14,18 @@ void rev_string(char *s)
 {
 	int i = 0;
 	int j = 0;
+	char str[500];
 
-	while (*s)
+	while (*(s + i))
 	{
+		*(str + i) = *(s + i);
 		i++;
-		s++;
 	}
+	i = i - 1;
 	while (i >= 0)
 	{
-		s[j] = *s;
+		*(s + i) = *(str + j);
 		i--;
-		s--;
 		j++;
 	}
 }
