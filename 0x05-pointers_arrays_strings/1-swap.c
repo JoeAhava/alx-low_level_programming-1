@@ -9,7 +9,7 @@
  *
  * Return: nothin
  *
- */g
+ */
 
 void swap_int(int *a, int *b)
 {
