@@ -4,17 +4,23 @@
 void puts_half(char *str)
 {
 	int i = 0;
-	int j;
+	int count = 0;
 
-	while (*(str + 1))
-		i++;
-	j = i / 2;
-	if (i % 2)
-		j +=1;
-	while(j < 1)
+	while (str[i] != 0)
 	{
-		_putchar(*(str + j));
-		j++;
+		count++;
+		i++;
+	}
+	if (count % 2 == 0)
+	{
+		for (i = count / 2; i < count; i++)
+			_putcar(str[i]);
+	}
+	else
+	{
+
+		for (i = (count +1) / 2; i < count; i++)
+			_putchar(str[i]);
 	}
 	_putchar('\n');
 }
