@@ -16,6 +16,6 @@ void swap_int(int *a, int *b)
 	int tempo;
 
 	tempo = *a;
-	*b = *a;
-	*a = tempo;
+	*a = *b;
+	*b = tempo;
 }
