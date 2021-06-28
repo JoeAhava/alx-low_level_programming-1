@@ -9,7 +9,7 @@
  *
  */
 
-int _atoi(car *s)
+int _atoi(char *s)
 {
 	int i;
 	int h = 0;
