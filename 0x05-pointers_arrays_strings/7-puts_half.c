@@ -23,7 +23,7 @@ void puts_half(char *str)
 	}
 	while (i >= 0)
 	{
-		tmp = *str;
+		*tmp = str;
 		i--;
 		str--;
 	}
