@@ -24,8 +24,10 @@ void print_rev(char *s)
 		if (i > 0)
 			i--;
 		else
+		{
 			i--;
 			s--;
+		}
 	}
 	_putchar('\n');
 
