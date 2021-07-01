@@ -16,9 +16,9 @@ char *cap_string(char *c)
 	while (c[i] != '\0')
 	{
 		for (j = 0; a[j] != '\0'; j++)
-			if (s[i - 1] == a[j] && (s[i] >= 'a' && s[i] <= 'z'))
-				s[i] -= ('a' - 'A');
+			if (c[i - 1] == a[j] && (c[i] >= 'a' && c[i] <= 'z'))
+				c[i] -= ('a' - 'A');
 		i++;
 	}
-	return (s);
+	return (c);
 }
