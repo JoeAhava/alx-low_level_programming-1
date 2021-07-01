@@ -9,7 +9,7 @@ char *cap_string(char *c)
 {
 	int i = 1;
 	int j = 0;
-	char a[] = " \t\n,;.!?\"{}";
+	char a[] = " \t\n,;.!?\"(){}";
 
 	if (c[0] >= 'a' && c[0] <= 'z')
 		c[0] -= 'a' - 'A';
