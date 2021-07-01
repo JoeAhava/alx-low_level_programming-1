@@ -20,6 +20,6 @@ char *leet(char *c)
 			if (c[i] == a[j])
 				c[i] = b[j / 2];
 		}
-		return (c);
 	}
+	return (c);
 }
