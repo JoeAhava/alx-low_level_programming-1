@@ -20,9 +20,7 @@ char *_strchr(char *s, char c)
 	while (j < i)
 	{
 		if (s[j] == c)
-		{
 			return (s);
-		}
 		else
 			return (NULL);
 		j++;
