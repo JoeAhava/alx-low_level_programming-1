@@ -7,7 +7,6 @@
  * Return: int;
  */
 
-
 int check(int i, int num)
 {
 	if ((i * i) == num)

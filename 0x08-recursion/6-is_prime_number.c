@@ -14,7 +14,7 @@ int check(int i, int num)
 	if (i == num - 1)
 		return (1);
 	if (num > i)
-		return (check(i + q, num));
+		return (check(i + 1, num));
 	return (1);
 }
 
