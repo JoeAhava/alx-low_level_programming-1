@@ -6,10 +6,9 @@
  * @argv: value of arg
  * Return: int
  */
-
 int main(int argc, char *argv[])
 {
-	(void) argc;
 	printf("%d\n", --argc);
+	(void) argv;
 	return (0);
 }
