@@ -2,6 +2,7 @@
 #define HOLBERTON_H
 
 #include <stdio.h>
+#include <stdlib.h>
 int _putchar(char car);
 char *_strdup(char *str);
 #endif
