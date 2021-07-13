@@ -12,10 +12,8 @@ char *argstostr(int ac, char **av)
 	int i, j, len, bufferlen;
 	char *p;
 
-	/**
-	 * if (ac == 0)
-	 * return (NULL);
-	 */
+	if (ac == 0)
+		return (NULL);
 	if (av == NULL)
 		return (NULL);
 	i = j = len = bufferlen = 0;
