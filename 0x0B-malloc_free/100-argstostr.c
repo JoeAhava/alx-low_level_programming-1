@@ -16,6 +16,7 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	if (av == NULL)
 		return (NULL);
+
 	i = j = len = bufferlen = 0;
 	for (i = 0; av[i]; i++)
 	{
