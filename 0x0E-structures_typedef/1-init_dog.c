@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include <stdlib.h>
 #include "dog.h"
 /**
   * init_dog - initialize struct dog.
