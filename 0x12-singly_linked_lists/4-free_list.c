@@ -1,20 +1,21 @@
 #include "lists.h"
+
 /**
- * free_list - fress linked lists
- * @head: head of the list
- * Return: no return
+ * free_list - free a `list_t` list
+ * @head: head of linked list
  */
 void free_list(list_t *head)
 {
-	list_t *aux;
-	list_t *aux2;
+	list_t *current;
+	list_t *nxt;
 
-	aux = head;
-	while (aux)
+	current = head;
+
+	while (current != NULL)
 	{
-	aux2 = aux;
-	free(aux->str);
-	free(aux);
-	aux = aux2->next;
+		nxt = current->next;
+		free(current->str);
+		free(current);
+		current = nxt;
 	}
 }
