@@ -1,68 +1,80 @@
 #include "lists.h"
-#include <stdio.h>
-
 /**
- * free_no_loop - free linked list
- * if no loop inside
- * @slow: head of linked list
- * Return: number of nodes
+ * free_list3 - frees a list
+ * @head: head of the list
  */
-int free_no_loop(listint_t *slow)
+void free_list3(listint_addr *head)
 {
-	int i = 0;
-	listint_t *tmp;
+	listint_addr *aux;
 
-	while (slow != NULL)
+	aux = head;
+	while (head)
 	{
-		tmp = slow;
-		slow = slow->next;
-		free(tmp);
-		i++;
+		aux = head->next;
+		free(head);
+		head = aux;
 	}
-	return (i);
+
 }
 /**
- * free_listint_safe - free a linked list
- * @h: linked list
- * Return: number of nodes deleted
+ * add_nodeaddr2 - adds new nodes to list
+ * @head: address new head
+ * @addr: address to store
+ * Return: head
+ */
+listint_addr *add_nodeaddr2(listint_addr **head, const listint_t *addr)
+{
+	listint_addr *new_node;
+
+	new_node = malloc(sizeof(listint_addr));
+	if (new_node == NULL)
+	{
+		printf("Error\n");
+		free_list3(*head);
+		return (0);
+	}
+	new_node->address = addr;
+	new_node->next = *head;
+	*head = new_node;
+	return (*head);
+}
+/**
+ * free_listint_safe - frees lists with loops
+ * @h: address pointer head
+ * Return: number of nodes
  */
 size_t free_listint_safe(listint_t **h)
 {
-	listint_t *tmp, *start_loop, *fast = *h, *slow = *h;
-	int i = 0, seen = 0;
+	size_t n = 0;
+	listint_addr *addrs, *aux;
+	listint_t *aux2, *aux3;
 
-	if (h == NULL)
-		return (0);
-	while (fast != NULL && fast->next != NULL)
+	if (h)
 	{
-		slow = slow->next;
-		fast = fast->next->next;
-		if (slow == fast)
+		addrs = NULL;
+		aux3 = *h;
+		while (aux3)
 		{
-			slow = *h;
-			while (slow != fast)
+			aux = addrs;
+			while (addrs)
 			{
-				slow = slow->next;
-				fast = fast->next;
+				if (addrs->address == aux3)
+				{
+					free_list3(aux);
+					*h = NULL;
+					return (n);
+				}
+				addrs = addrs->next;
 			}
-			start_loop = slow; /* store adress of start loop to compare*/
-			slow = *h;
-			i++;
-			while (!(seen == 2))
-			{
-				i++;
-				tmp = slow;
-				slow = slow->next;
-				if (slow == start_loop)
-					seen++;
-				free(tmp);
-			}
-			*h = NULL;
-			i -= 1;
-			return (i);
+			addrs = aux;
+			aux2 = aux3->next;
+			add_nodeaddr2(&addrs, aux3);
+			free(aux3);
+			aux3 = aux2;
+			n++;
 		}
-	}
-	slow = *h;
+	free_list3(addrs);
 	*h = NULL;
-	return (free_no_loop(slow));
+	}
+return (n);
 }
