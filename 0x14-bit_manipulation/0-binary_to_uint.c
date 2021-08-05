@@ -1,46 +1,52 @@
 #include "holberton.h"
 /**
-  * _stoi - converts chars to ints
-  * @c: char to convert
-  * Return: converted int
-  */
-unsigned int _stoi(char c)
+  * _pow_recursion - power function
+  * @x: number base
+  * @y:  power
+  * Return: power
+**/
+int _pow_recursion(int x, int y)
 {
-	return ((unsigned int) c - '0');
+	if (y < 0)
+	{
+		return (-1);
+	}
+	if (y == 1)
+	{
+		return (x);
+	}
+	if (y == 0)
+	{
+	return (1);
+	}
+return (_pow_recursion(x, y - 1) * x);
 }
 /**
-  * _strlen - calculates the length of the string
-  * @s: input
-  * Return: length of string
-  */
-unsigned int _strlen(const char *s)
-{
-	unsigned int i;
-
-	for (i = 0; s[i]; i++)
-		;
-	return (i);
-}
-/**
-  * binary_to_uint - converts a string of 1's and 0's to a decimal number
-  * @b: string to convert
-  * Return: unsigned decimal number
-  */
+ * binary_to_uint - check the code for Holberton School students.
+ * @b: char binary input
+ * Return: unsigned integer.
+ */
 unsigned int binary_to_uint(const char *b)
 {
-	int i;
-	unsigned int result, tmp, expo;
+	int length = 0;
+	int i, pwr;
+	unsigned int decimal = 0;
 
-	if (!b)
-		return (0);
-	result = tmp = 0;
-	expo = 1;
-	for (i = _strlen(b) - 1; b[i]; i--, expo *= 2)
+	if (b)
 	{
-		if (b[i] != '0' && b[i] != '1')
+		while (b[length])
+		{
+			if (b[length] != 48 && b[length] != 49)
 			return (0);
-		tmp = _stoi(b[i]);
-		result += tmp * expo;
+			length++;
+		}
+		i = length - 1;
+		while (i >= 0)
+		{
+		pwr = _pow_recursion(2, length - i - 1);
+		decimal += (b[i] - '0') * pwr;
+		i--;
+		}
 	}
-	return (result);
+	return (decimal);
 }
