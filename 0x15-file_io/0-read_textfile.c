@@ -1,32 +1,28 @@
-#include "main.h"
+#include <stdlib.h>
 /**
-  * read_textfile - reads a text file and prints it to the POSIX standard out
-  * @filename: name of the file to read
-  * @letters: number of characters to print
-  * Return: 0 on success
-  **/
+ * read_textfile - read in a file and print to stdout
+ * @filename: the content to print
+ * @letters: number of chars to print
+ * Return: 0 if error, else bytes printed
+ */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int txt_file, total, read_status;
-	char buffer[BUFSIZE];
+	int fd_r, print_read = 0, print_write = 0, ltters = letters;
+	char *buffer;
 
+	buffer = malloc(sizeof(char) * letters);
+	if (buffer == NULL)
+		return (0);
 	if (filename == NULL)
 		return (0);
-	txt_file = open(filename, O_RDONLY);
-	if (txt_file == -1)
+	fd_r = open(filename, O_RDONLY);
+	if (fd_r == -1)
 		return (0);
-	total = 0;
-	read_status = 1;
-	while (letters > BUFSIZE && read_status != 0)
-	{
-		read_status = read(txt_file, buffer, BUFSIZE);
-		write(STDOUT_FILENO, buffer, read_status);
-		total += read_status;
-		letters -= BUFSIZE;
-	}
-	read_status = read(txt_file, buffer, letters);
-	write(STDOUT_FILENO, buffer, read_status);
-	total += read_status;
-	close(txt_file);
-	return (total);
+	print_read = read(fd_r, buffer, letters);
+	print_write = write(STDOUT_FILENO, buffer, print_read);
+	close(fd_r);
+	free(buffer);
+	if (print_write == -1 || print_read == -1 || ltters < print_write)
+		return (0);
+	return (print_read);
 }
