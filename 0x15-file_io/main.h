@@ -8,4 +8,5 @@ int append_text_to_file(const char *filename, char *text_content);
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <unistd.h>
+#include <elf.h>
 #endif
